@@ -8,12 +8,13 @@ $(function () {
 
   // 📦 دریافت XML
   $.ajax({
-    url: "xml/bookList.xml",
+    url: "json/bookList.json",
     type: "GET",
-    dataType: "xml",
+    dataType: "json", 
     success: function (data) {
       bookData = data;
-      allBooks = $(bookData).find("book");
+      // allBooks = $(bookData).find("book");
+       allBooks = bookData.bookstore;
       if(window.location.href.toLowerCase().indexOf("product") == -1){
 
       
@@ -30,7 +31,7 @@ $(function () {
       }
     },
     error: function () {
-      console.error("❌ خطا در بارگذاری فایل bookList.xml");
+      console.error("❌ خطا در بارگذاری فایل bookList.json");
     }
   });
 
