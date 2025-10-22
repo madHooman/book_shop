@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>کتاب‌ها</title>
+
+  <!-- Bootstrap RTL -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+
+  <!-- Range Slider -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ion-rangeslider@2.3.1/css/ion.rangeSlider.min.css"/>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ion-rangeslider@2.3.1/js/ion.rangeSlider.min.js"></script>
+</head>
+<body class="bg-light">
+<header class="bg-white border-bottom shadow-sm py-3">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center">
+
+    <!-- لوگو و نام سایت -->
+    <a href="#" class="d-flex align-items-center text-dark text-decoration-none mb-2 mb-md-0">
+      <img src="https://cdn-icons-png.flaticon.com/512/29/29302.png" alt="Logo" width="40" height="40" class="me-2">
+      <span class="fs-5 fw-bold">کتاب‌فروشی آنلاین</span>
+    </a>
+
+    <!-- نوار جست‌وجو -->
+    <form class="d-flex flex-grow-1 mx-md-4 mt-2 mt-md-0" role="search">
+      <input class="form-control form-control-sm rounded-pill px-3 shadow-sm" type="search" placeholder="جست‌وجو در میان کتاب‌ها..." aria-label="Search">
+    </form>
+
+    <!-- دکمه‌های کاربری -->
+    <div class="d-flex align-items-center mt-2 mt-md-0">
+      <a href="#" class="btn btn-light btn-sm rounded-pill px-3 me-2 border">
+        <i class="bi bi-person"></i> ورود / ثبت‌نام
+      </a>
+      <a href="#" class="btn btn-outline-secondary btn-sm rounded-pill px-3">
+        <i class="bi bi-cart"></i> سبد خرید
+      </a>
+    </div>
+
+  </div>
+</header>
+<!-- content -->
+<div class="container py-4">
+
+  <!-- navbar درون container و بالای فیلترها -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm rounded mb-4">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">📘 کتاب‌فروشی</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav me-3 mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="subjectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              موضوعات
+            </a>
+            <ul class="dropdown-menu p-2" aria-labelledby="subjectsDropdown" style="min-width:200px; text-align:right;">
+              <div class="subjects"></div>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- بخش فیلتر و محصولات -->
+  <div class="row">
+    
+    <!-- فیلترها -->
+    <aside class="col-md-3 bg-white p-3 rounded shadow-sm">
+      <h5 class="mb-3">فیلترها</h5>
+      <label for="priceRange" class="form-label">قیمت:</label>
+      <input type="text" class="priceSlider w-100" id="priceRange" name="priceRange" value="" />
+    </aside>
+
+    <!-- لیست کتاب‌ها -->
+    <section class="col-md-9">
+      <div class="bookShowList row g-3">
+        <!-- کارت‌های کتاب‌ها در اینجا با JS اضافه می‌شوند -->
+      </div>
+
+      <!-- صفحه‌بندی -->
+      <div class="pageBlock mt-4">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">قبلی</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">بعدی</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="bg-white border-top mt-5 pt-4 pb-3">
+  <div class="container">
+    <div class="row text-center text-md-start align-items-start">
+
+      <!-- درباره فروشگاه -->
+      <div class="col-md-4 mb-4">
+        <h6 class="fw-bold mb-3 text-dark">📘 کتاب‌فروشی آنلاین</h6>
+        <p class="small text-muted mb-0">
+          بزرگ‌ترین مجموعه کتاب‌های چاپی و دیجیتال.  
+          ما با عشق به مطالعه، بهترین‌ها را برای شما فراهم کرده‌ایم.
+        </p>
+      </div>
+
+      <!-- لینک‌های مفید -->
+      <div class="col-md-4 mb-4">
+        <h6 class="fw-bold mb-3 text-dark">لینک‌های مفید</h6>
+        <ul class="list-unstyled small">
+          <li class="mb-2"><a href="#" class="text-muted text-decoration-none hover-link">درباره ما</a></li>
+          <li class="mb-2"><a href="#" class="text-muted text-decoration-none hover-link">تماس با ما</a></li>
+          <li class="mb-2"><a href="#" class="text-muted text-decoration-none hover-link">سوالات متداول</a></li>
+          <li><a href="#" class="text-muted text-decoration-none hover-link">قوانین و مقررات</a></li>
+        </ul>
+      </div>
+
+      <!-- تماس و شبکه‌ها -->
+      <div class="col-md-4 mb-4">
+        <h6 class="fw-bold mb-3 text-dark">ارتباط با ما</h6>
+        <ul class="list-unstyled small text-muted mb-3">
+          <li class="mb-2">📍 تهران، خیابان انقلاب، پلاک ۲۴</li>
+          <li class="mb-2">📞 ۰۲۱-۱۲۳۴۵۶۷۸</li>
+          <li>📧 info@bookstore.ir</li>
+        </ul>
+        <div>
+          <a href="#" class="text-muted me-3 fs-5"><i class="bi bi-telegram"></i></a>
+          <a href="#" class="text-muted me-3 fs-5"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-muted fs-5"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- خط پایین -->
+    <div class="text-center border-top mt-4 pt-3 small text-muted">
+      © ۲۰۲۵ کتاب‌فروشی آنلاین | ساخته‌شده با ❤️ برای دوست‌داران کتاب
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    line-height: 1.8;
+  }
+  footer h6 {
+    font-size: 1rem;
+  }
+  footer .hover-link:hover {
+    color: #0d6efd !important;
+  }
+</style>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- your JS -->
+<script src="js/api.js"></script>
+
+
+
+</body>
+</html>

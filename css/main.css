@@ -1,0 +1,26 @@
+/* // */
+/* .now-wrap{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} */
+
+     body { padding-top: 70px; }
+    .bookShowList .card { min-height: 240px; }
+    .navbar .subjects { max-height: 300px; overflow:auto; }
+    .navbar .subjects hr { margin: 0.25rem 0; border-color: rgba(0,0,0,0.1); }
+
+
+/* .bookShowList .card {
+  width: 350px;
+  min-height: 400px;
+  margin: 10px auto;
+  text-align: center;
+}
+.bookShowList .card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+} */
+ 
